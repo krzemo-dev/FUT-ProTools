@@ -74,6 +74,42 @@
         alert('Help section coming soon!');
     });
     sidebar.appendChild(helpButton);
+    
+    // Add search input and button
+    const searchContainer = document.createElement('div');
+    searchContainer.style.padding = '10px';
+    searchContainer.style.display = 'flex';
+    searchContainer.style.justifyContent = 'center';
+    sidebar.appendChild(searchContainer);
+    
+    const searchInput = document.createElement('input');
+    searchInput.type = 'text';
+    searchInput.placeholder = 'Search...';
+    searchInput.style.width = '70%';
+    searchInput.style.padding = '10px';
+    searchInput.style.border = 'none';
+    searchInput.style.borderRadius = '4px';
+    searchInput.style.marginRight = '10px';
+    searchContainer.appendChild(searchInput);
+    
+    const searchButton = document.createElement('button');
+    searchButton.innerHTML = 'Search';
+    searchButton.style.padding = '10px';
+    searchButton.style.border = 'none';
+    searchButton.style.backgroundColor = '#2980b9';
+    searchButton.style.color = 'white';
+    searchButton.style.cursor = 'pointer';
+    searchButton.style.borderRadius = '4px';
+    searchContainer.appendChild(searchButton);
+    
+    // Search button event listener
+    searchButton.addEventListener('click', function() {
+        const query = searchInput.value.trim();
+        if (query) {
+            alert('Searching for: ' + query);
+            // Implement your search logic here
+        }
+    });
 
     // Add Account button with submenu
     const accountButton = document.createElement('button');
@@ -121,7 +157,74 @@
     });
     accountSubmenu.appendChild(settingsOption);
 
-    const logoutOption = document.createElement('button');
+    const     userAvatar.style.height = '100px';
+    userAvatar.style.borderRadius = '50%';
+    userAvatar.style.marginBottom = '10px';
+    userProfileSection.appendChild(userAvatar);
+    
+    // Add user name
+    const userName = document.createElement('div');
+    userName.innerHTML = 'John Doe'; // Replace with actual user name
+    userName.style.color = 'white';
+    userName.style.fontSize = '18px';
+    userName.style.marginBottom = '10px';
+    userProfileSection.appendChild(userName);
+    
+    // Add dark mode toggle
+    const darkModeContainer = document.createElement('div');
+    darkModeContainer.style.marginBottom = '10px';
+    darkModeContainer.style.display = 'flex';
+    darkModeContainer.style.alignItems = 'center';
+    userProfileSection.appendChild(darkModeContainer);
+    
+    const darkModeLabel = document.createElement('label');
+    darkModeLabel.innerHTML = 'Dark Mode';
+    darkModeLabel.style.color = 'white';
+    darkModeLabel.style.marginRight = '10px';
+    darkModeContainer.appendChild(darkModeLabel);
+    
+    const darkModeToggle = document.createElement('input');
+    darkModeToggle.type = 'checkbox';
+    darkModeContainer.appendChild(darkModeToggle);
+    
+    // Dark mode toggle event listener
+    darkModeToggle.addEventListener('change', function() {
+        if (darkModeToggle.checked) {
+            document.body.style.backgroundColor = '#121212';
+            document.body.style.color = '#ffffff';
+        } else {
+            document.body.style.backgroundColor = '#ffffff';
+            document.body.style.color = '#000000';
+        }
+    });
+    
+    // Add logout button
+    const logoutButton = document.createElement('button');
+    logoutButton.innerHTML = 'Logout';
+    logoutButton.style.padding = '10px 20px';
+    logoutButton.style.border = 'none';
+    logoutButton.style.backgroundColor = '#e74c3c';
+    logoutButton.style.color = 'white';
+    logoutButton.style.cursor = 'pointer';
+    logoutButton.style.borderRadius = '5px';
+    logoutButton.addEventListener('click', function() {
+        alert('Logging out...');
+        // Implement logout logic here
+    });
+    userProfileSection.appendChild(logoutButton);
+    
+    // Add notification area
+    const notificationArea = document.createElement('div');
+    notificationArea.id = 'gm-notification-area';
+    notificationArea.style.position = 'fixed';
+    notificationArea.style.bottom = '10px';
+    notificationArea.style.right = '10px';
+    notificationArea.style.width = '250px';
+    notificationArea.style.backgroundColor = '#444';
+    notificationArea.style.color = 'white';
+    notificationArea.style.padding = '10px';
+    notificationArea.style.borderRadius = '5px';
+    notificationArea.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';Option = document.createElement('button');
     logoutOption.innerHTML = 'Logout';
     logoutOption.style.padding = '15px';
     logoutOption.style.border = 'none';
@@ -156,4 +259,166 @@
         }
     `;
     document.head.appendChild(style);
+
+
+
+
+
+
+
+
+
+        // Add user profile section
+
+
+        userAvatar.style.height = '100px';
+        userAvatar.style.borderRadius = '50%';
+        userAvatar.style.marginBottom = '10px';
+        userProfileSection.appendChild(userAvatar);
+        
+        // Add user name
+        const userName = document.createElement('div');
+        userName.innerHTML = 'John Doe'; // Replace with actual user name
+        userName.style.color = 'white';
+        userName.style.fontSize = '18px';
+        userName.style.marginBottom = '10px';
+        userProfileSection.appendChild(userName);
+        
+        // Add dark mode toggle
+        const darkModeContainer = document.createElement('div');
+        darkModeContainer.style.marginBottom = '10px';
+        darkModeContainer.style.display = 'flex';
+        darkModeContainer.style.alignItems = 'center';
+        userProfileSection.appendChild(darkModeContainer);
+        
+        const darkModeLabel = document.createElement('label');
+        darkModeLabel.innerHTML = 'Dark Mode';
+        darkModeLabel.style.color = 'white';
+        darkModeLabel.style.marginRight = '10px';
+        darkModeContainer.appendChild(darkModeLabel);
+        
+        const darkModeToggle = document.createElement('input');
+        darkModeToggle.type = 'checkbox';
+        darkModeContainer.appendChild(darkModeToggle);
+        
+        // Dark mode toggle event listener
+        darkModeToggle.addEventListener('change', function() {
+            if (darkModeToggle.checked) {
+                document.body.style.backgroundColor = '#121212';
+                document.body.style.color = '#ffffff';
+            } else {
+                document.body.style.backgroundColor = '#ffffff';
+                document.body.style.color = '#000000';
+            }
+        });
+        
+        // Add logout button
+        const logoutButton = document.createElement('button');
+        logoutButton.innerHTML = 'Logout';
+        logoutButton.style.padding = '10px 20px';
+        logoutButton.style.border = 'none';
+        logoutButton.style.backgroundColor = '#e74c3c';
+        logoutButton.style.color = 'white';
+        logoutButton.style.cursor = 'pointer';
+        logoutButton.style.borderRadius = '5px';
+        logoutButton.addEventListener('click', function() {
+            alert('Logging out...');
+            // Implement logout logic here
+        });
+        userProfileSection.appendChild(logoutButton);
+        
+        // Add notification area
+        const notificationArea = document.createElement('div');
+        notificationArea.id = 'gm-notification-area';
+        notificationArea.style.position = 'fixed';
+        notificationArea.style.bottom = '10px';
+        notificationArea.style.right = '10px';
+        notificationArea.style.width = '250px';
+        notificationArea.style.backgroundColor = '#444';
+        notificationArea.style.color = 'white';
+        notificationArea.style.padding = '10px';
+        notificationArea.style.borderRadius = '5px';
+        notificationArea.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
+
+
+
+
+    const userProfileSection = document.createElement('div');
+    userProfileSection.style.padding = '20px';
+    userProfileSection.style.borderBottom = '1px solid #555';
+    userProfileSection.style.textAlign = 'center';
+    sidebar.appendChild(userProfileSection);
+    
+    // Add user avatar
+    const userAvatar = document.createElement('img');
+    userAvatar.src = 'https://via.placeholder.com/100'; // Replace with actual avatar URL
+    userAvatar.style.width = '100px';
+    userAvatar.style.height = '100px';
+    userAvatar.style.borderRadius = '50%';
+    userAvatar.style.marginBottom = '10px';
+    userProfileSection.appendChild(userAvatar);
+    
+    // Add user name
+    const userName = document.createElement('div');
+    userName.innerHTML = 'John Doe'; // Replace with actual user name
+    userName.style.color = 'white';
+    userName.style.fontSize = '18px';
+    userName.style.marginBottom = '10px';
+    userProfileSection.appendChild(userName);
+    
+    // Add logout button
+    const logoutButton = document.createElement('button');
+    logoutButton.innerHTML = 'Logout';
+    logoutButton.style.padding = '10px 20px';
+    logoutButton.style.border = 'none';
+    logoutButton.style.backgroundColor = '#e74c3c';
+    logoutButton.style.color = 'white';
+    logoutButton.style.cursor = 'pointer';
+    logoutButton.style.borderRadius = '5px';
+    logoutButton.addEventListener('click', function() {
+        alert('Logging out...');
+        // Implement logout logic here
+    });
+    userProfileSection.appendChild(logoutButton);
+        // Add notification area
+    const notificationArea = document.createElement('div');
+    notificationArea.id = 'gm-notification-area';
+    notificationArea.style.position = 'fixed';
+    notificationArea.style.bottom = '10px';
+    notificationArea.style.right = '10px';
+    notificationArea.style.width = '250px';
+    notificationArea.style.backgroundColor = '#444';
+    notificationArea.style.color = 'white';
+    notificationArea.style.padding = '10px';
+    notificationArea.style.borderRadius = '5px';
+    notificationArea.style.boxShadow = '0 0 10px rgba(0, 0, 0, 0.5)';
+    notificationArea.style.display = 'none';
+    document.body.appendChild(notificationArea);
+    
+    // Function to show notifications
+    function showNotification(message) {
+        notificationArea.innerHTML = message;
+        notificationArea.style.display = 'block';
+        setTimeout(() => {
+            notificationArea.style.display = 'none';
+        }, 3000);
+    }
+    
+    // Add a sample notification button
+    const notificationButton = document.createElement('button');
+    notificationButton.innerHTML = 'Show Notification';
+    notificationButton.style.width = '100%';
+    notificationButton.style.padding = '15px';
+    notificationButton.style.border = 'none';
+    notificationButton.style.backgroundColor = '#34495e';
+    notificationButton.style.color = 'white';
+    notificationButton.style.textAlign = 'left';
+    notificationButton.style.cursor = 'pointer';
+    notificationButton.style.fontSize = '18px';
+    notificationButton.addEventListener('click', function() {
+        showNotification('This is a sample notification!');
+    });
+    sidebar.appendChild(notificationButton);
+    
+    })();
 })();

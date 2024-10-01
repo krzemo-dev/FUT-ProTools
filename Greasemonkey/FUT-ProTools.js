@@ -6,7 +6,10 @@
 // @author       GitHub Copilot
 // @match        *://*/*
 // @grant        none
+// @updateURL    https://raw.githubusercontent.com/krzemo-dev/FUT-ProTools/refs/heads/main/Greasemonkey/FUT-ProTools.js
+// @downloadURL  https://raw.githubusercontent.com/krzemo-dev/FUT-ProTools/refs/heads/main/Greasemonkey/FUT-ProTools.js
 // ==/UserScript==
+  
 
 (function() {
     'use strict';

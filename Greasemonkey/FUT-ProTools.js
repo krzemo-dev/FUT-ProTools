@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Collapsible Sidebar
 // @namespace    http://tampermonkey.net/
-// @version      1.0
+// @version      1.0.1
 // @description  Create a collapsible sidebar on the right side of the screen with additional functionality
 // @updateURL    https://raw.githubusercontent.com/krzemo-dev/FUT-ProTools/refs/heads/main/Greasemonkey/FUT-ProTools.js
 // @downloadURL  https://raw.githubusercontent.com/krzemo-dev/FUT-ProTools/refs/heads/main/Greasemonkey/FUT-ProTools.js
